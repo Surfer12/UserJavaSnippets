@@ -1,0 +1,555 @@
+{
+    // Place your snippets for java here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "Basic Java Class": {
+        "prefix": "class",
+        "body": [
+            "public class ${1:ClassName} {",
+            "    public static void main(String[] args) {",
+            "        $0 //main method body",
+            "    }",
+            "}"
+        ],
+        "description": "Java class with a main."
+    },
+    "Basic Java Method": {
+        "prefix": "method",
+        "body": [
+            "public ${1:void} ${2:methodName}(${3:parameters}){",
+            "    ${4://method body}",
+            "}",
+        ],
+        "description": "Basic Java Method Template"
+    },
+    "Basic Java Constructor": {
+        "prefix": "BasicConstructor",
+        "body": [
+            "public ${1:ClassName}($2){",
+            "    ${3://constructor body}",
+            "}",
+        ],
+        "description": "Java Constructor Basic Template",
+    },
+    "Basic Java Single Try-Catch Block": {
+        "prefix": "singleTryCatch",
+        "body": [
+            "try {",
+            "    ${1://try block}",
+            "}",
+            "catch (${2:Exception e}){",
+            "    ${3://catch block}",
+            "}",
+        ],
+        "description": "Single Try-Catch Exception e Template",
+    },
+    "Basic Java For Loop": {
+        "prefix": "for",
+        "body": [
+            "for (int ${1:i} = 0; ${1:i} < ${2:array.length}; ${1:i}++){",
+            "    $0",
+            "}",
+        ],
+        "description": "For Loop Template"
+    },
+    "Basic Java If-Else Statement": {
+        "prefix": "ifelse",
+        "body": [
+            "if(${1:condition}){",
+            "    ${2:// if block}",
+            "}",
+            "else{",
+            "    ${3:// else block}",
+            "}",
+        ],
+        "description": "If else control flow template",
+    },
+    "Basic Java Getter": {
+        "prefix": "getter",
+        "body": [
+            "public ${1:ReturnType} get${2:FieldName}() {",
+            "    return ${2:FieldName};",
+            "}",
+        ],
+        "description": "Getter method template"
+    },
+    "Java List Initialization": {
+        "prefix": "arrayList",
+        "body": [
+            "List<${1:Type}> ${2:listName} = new ArrayList<>();",
+        ],
+        "description": "ArrayList Initialization"
+    },
+    "Java Map Initialization": {
+        "prefix": "hashMap",
+        "body": [
+            "Map<${1:KeyType}, ${2:ValueType}> ${3:mapName} = new HashMap<>();",
+        ],
+        "description": "HashMap Initialization"
+    },
+    "Java Enhanced For Loop": {
+        "prefix": "javaEnhancedForLoop",
+        "body": [
+            "for (${1:Type} ${2:element} : ${3:collection}) {",
+            "    ${4:// loop body}",
+            "}"
+        ],
+        "description": "Creates an enhanced for loop"
+    },
+    "Java toString": {
+        "prefix": "javaToString",
+        "body": [
+            "@Override",
+            "public String toString() {",
+            "    return \"${1:ClassName}{\" +",
+            "           \"${2:field}='\" + ${2:field} + '\\'' +",
+            "           '}';",
+            "}"
+        ],
+        "description": "Creates a toString method"
+    },
+    "Java Set Initialization": {
+        "prefix": "set",
+        "body": [
+            "Set<${1:Type}> ${2:setName} = new HashSet<>();"
+        ],
+        "description": "Creates a Set"
+    },
+    "Java Queue Initialization": {
+        "prefix": "Queue",
+        "body": [
+            "Queue<${1:Type}> ${2:queueName} = new LinkedList<>();"
+        ],
+        "description": "Creates a Queue initialization"
+    },
+    "Java LinkedList Initialization": {
+        "prefix": "linkedList",
+        "body": [
+            "LinkedList<${1:Type}> ${2:listName} = new LinkedList<>();"
+        ],
+        "description": "Creates a LinkedList initialization"
+    },
+    "Java Stack Initialization": {
+        "prefix": "stack",
+        "body": [
+            "Stack<${1:Type}> ${2:stackName} = new Stack<>();"
+        ],
+        "description": "Creates a Stack initialization"
+    },
+    "Java Check if Stack is Not Empty": {
+        "prefix": "stackNotEmpty",
+        "body": [
+            "if (!${1:stack}.isEmpty()) {",
+            "    // Your code here",
+            "}"
+        ],
+        "description": "Check if a stack is not empty"
+    },
+    "Java Add Element to List": {
+        "prefix": "listAdd",
+        "body": [
+            "${1:list}.add(${2:element});"
+        ],
+        "description": "Add an element to a list"
+    },
+    "Java Add Key-Value Pair to Map": {
+        "prefix": "mapPut",
+        "body": [
+            "${1:map}.put(${2:key}, ${3:value});"
+        ],
+        "description": "Add a key-value pair to a map"
+    },
+    "Java Iterate Over List": {
+        "prefix": "listIterate",
+        "body": [
+            "for (${1:Type} ${2:element} : ${3:list}) {",
+            "    // Your code here",
+            "}"
+        ],
+        "description": "Iterate over a list"
+    },
+    "Java Iterate Over Map": {
+        "prefix": "mapIterate",
+        "body": [
+            "for (Map.Entry<${1:KeyType}, ${2:ValueType}> ${3:entry} : ${4:map}.entrySet()) {",
+            "    ${1:KeyType} ${5:key} = ${3:entry}.getKey();",
+            "    ${2:ValueType} ${6:value} = ${3:entry}.getValue();",
+            "    // Your code here",
+            "}"
+        ],
+        "description": "Iterate over a map"
+    },
+    "Java Check if Map Contains Key": {
+        "prefix": "mapContainsKey",
+        "body": [
+            "if (${1:map}.containsKey(${2:key})) {",
+            "    // Your code here",
+            "}"
+        ],
+        "description": "Check if a map contains a key"
+    },
+    "Java Check if List Contains Element": {
+        "prefix": "listContains",
+        "body": [
+            "if (${1:list}.contains(${2:element})) {",
+            "    // Your code here",
+            "}"
+        ],
+        "description": "Check if a list contains an element"
+    },
+    "Java Print to Console": {
+        "prefix": "printLine",
+        "body": [
+            "System.out.println(\"${1:Your message here}\");"
+        ],
+        "description": "Print to console"
+    },
+    "Java Generic Method Signature": {
+        "prefix": "methodSignature",
+        "body": [
+            "public ${1:ReturnType} ${2:methodName}(${3:ParameterType} ${4:parameter}) {",
+            "    // Your code here",
+            "    return ${5:returnValue};",
+            "}"
+        ],
+        "description": "Generic method signature"
+    },
+    "Java Main Method": {
+        "prefix": "mainMethod",
+        "body": [
+            "public static void main(String[] args) {",
+            "    // Your code here",
+            "}"
+        ],
+        "description": "Main method"
+    },
+    "Java Create a New Object": {
+        "prefix": "newObject",
+        "body": [
+            "${1:ClassName} ${2:objectName} = new ${1:ClassName}();"
+        ],
+        "description": "Create a new object"
+    },
+    "Java Define an Interface": {
+        "prefix": "defineInterface",
+        "body": [
+            "public interface ${1:InterfaceName} {",
+            "    ${2:returnType} ${3:methodName}(${4:parameterType} ${5:parameter});",
+            "}"
+        ],
+        "description": "Define an interface"
+    },
+    "Java Implement an Interface": {
+        "prefix": "implementInterface",
+        "body": [
+            "public class ${1:ClassName} implements ${2:InterfaceName} {",
+            "    @Override",
+            "    public ${3:returnType} ${4:methodName}(${5:parameterType} ${6:parameter}) {",
+            "        // Your code here",
+            "    }",
+            "}"
+        ],
+        "description": "Implement an interface"
+    },
+    "Java Constructor Dependency Injection": {
+        "prefix": "constructorDI",
+        "body": [
+            "public class ${1:ClassName} {",
+            "    private final ${2:DependencyType} ${3:dependency};",
+            "",
+            "    public ${1:ClassName}(${2:DependencyType} ${3:dependency}) {",
+            "        this.${3:dependency} = ${3:dependency};",
+            "    }",
+            "",
+            "    public void ${4:methodName}() {",
+            "        ${3:dependency}.${5:dependencyMethod}();",
+            "    }",
+            "}"
+        ],
+        "description": "Constructor dependency injection"
+    },
+    "Java Single Responsibility Principle": {
+        "prefix": "singleResponsibility",
+        "body": [
+            "public class ${1:ClassName} {",
+            "    public void ${2:method1}() {",
+            "        // Responsibility 1",
+            "    }",
+            "",
+            "    public void ${3:method2}() {",
+            "        // Responsibility 2",
+            "    }",
+            "}"
+        ],
+        "description": "Single Responsibility Principle"
+    },
+    "Java Open/Closed Principle": {
+        "prefix": "openClosed",
+        "body": [
+            "public abstract class ${1:BaseClass} {",
+            "    public abstract void ${2:baseMethod}();",
+            "}",
+            "",
+            "public class ${3:DerivedClass} extends ${1:BaseClass} {",
+            "    @Override",
+            "    public void ${2:baseMethod}() {",
+            "        // Implementation",
+            "    }",
+            "}"
+        ],
+        "description": "Open/Closed Principle"
+    },
+    "Java Liskov Substitution Principle": {
+        "prefix": "liskovSubstitution",
+        "body": [
+            "public class ${1:BaseClass} {",
+            "    public void ${2:baseMethod}() {",
+            "        // Base implementation",
+            "    }",
+            "}",
+            "",
+            "public class ${3:DerivedClass} extends ${1:BaseClass} {",
+            "    @Override",
+            "    public void ${2:baseMethod}() {",
+            "        // Derived implementation",
+            "    }",
+            "}",
+            "",
+            "public void useBaseClass(${1:BaseClass} ${4:baseInstance}) {",
+            "    ${4:baseInstance}.${2:baseMethod}();",
+            "}"
+        ],
+        "description": "Liskov Substitution Principle"
+    },
+    "Java Interface Segregation Principle": {
+        "prefix": "interfaceSegregation",
+        "body": [
+            "public interface ${1:Interface1} {",
+            "    void ${2:method1}();",
+            "}",
+            "",
+            "public interface ${3:Interface2} {",
+            "    void ${4:method2}();",
+            "}",
+            "",
+            "public class ${5:ClassName} implements ${1:Interface1}, ${3:Interface2} {",
+            "    @Override",
+            "    public void ${2:method1}() {",
+            "        // Implementation of method1",
+            "    }",
+            "",
+            "    @Override",
+            "    public void ${4:method2}() {",
+            "        // Implementation of method2",
+            "    }",
+            "}"
+        ],
+        "description": "Interface Segregation Principle"
+    },
+    "Java Dependency Inversion Principle": {
+        "prefix": "dependencyInversion",
+        "body": [
+            "public interface ${1:Service} {",
+            "    void ${2:execute}();",
+            "}",
+            "",
+            "public class ${3:ServiceImpl} implements ${1:Service} {",
+            "    @Override",
+            "    public void ${2:execute}() {",
+            "        // Implementation",
+            "    }",
+            "}",
+            "",
+            "public class ${4:Client} {",
+            "    private ${1:Service} ${5:service};",
+            "",
+            "    public ${4:Client}(${1:Service} ${5:service}) {",
+            "        this.${5:service} = ${5:service};",
+            "    }",
+            "",
+            "    public void ${6:perform}() {",
+            "        ${5:service}.${2:execute}();",
+            "    }",
+            "}"
+        ],
+        "description": "Dependency Inversion Principle"
+    },
+    "Java Encapsulation": {
+        "prefix": "encapsulation",
+        "body": [
+            "public class ${1:ClassName} {",
+            "    private ${2:Type} ${3:variable};",
+            "",
+            "    public ${2:Type} get${3:Variable}() {",
+            "        return ${3:variable};",
+            "    }",
+            "",
+            "    public void set${3:Variable}(${2:Type} ${3:variable}) {",
+            "        this.${3:variable} = ${3:variable};",
+            "    }",
+            "}"
+        ],
+        "description": "Encapsulation with getters and setters"
+    },
+    "Java Abstract Class and Extension": {
+        "prefix": "javaAbstractClassExtension",
+        "body": [
+            "public class ${1:BaseClass} {",
+            "    public void ${2:baseMethod}() {",
+            "        // Base class method implementation",
+            "    }",
+            "}",
+            "",
+            "public class ${3:DerivedClass} extends ${1:BaseClass} {",
+            "    @Override",
+            "    public void ${2:baseMethod}() {",
+            "        // Derived class method implementation",
+            "    }",
+            "}"
+        ],
+        "description": "Java Abstract Class and Extension"
+    },
+    "Java Polymorphism": {
+        "prefix": "polymorphism",
+        "body": [
+            "public class ${1:BaseClass} {",
+            "    public void ${2:methodName}() {",
+            "        // Base class method implementation",
+            "    }",
+            "}",
+            "",
+            "public class ${3:DerivedClass} extends ${1:BaseClass} {",
+            "    @Override",
+            "    public void ${2:methodName}() {",
+            "        // Derived class method implementation",
+            "    }",
+            "}",
+            "",
+            "public class ${4:AnotherDerivedClass} extends ${1:BaseClass} {",
+            "    @Override",
+            "    public void ${2:methodName}() {",
+            "        // Another derived class method implementation",
+            "    }",
+            "}"
+        ],
+        "description": "Polymorphism with method overriding"
+    },
+    "Java Abstraction": {
+        "prefix": "abstraction",
+        "body": [
+            "public abstract class ${1:AbstractClass} {",
+            "    public abstract void ${2:abstractMethod}();",
+            "",
+            "    public void ${3:concreteMethod}() {",
+            "        // Concrete method implementation",
+            "    }",
+            "}",
+            "",
+            "public class ${4:ConcreteClass} extends ${1:AbstractClass} {",
+            "    @Override",
+            "    public void ${2:abstractMethod}() {",
+            "        // Implementation of abstract method",
+            "    }",
+            "}"
+        ],
+        "description": "Abstraction with an abstract class"
+    },
+    "Java Encapsulation Private Fields": {
+        "prefix": "privateFields",
+        "body": [
+            "public class ${1:ClassName} {",
+            "    private ${2:Type} ${3:fieldName};",
+            "",
+            "    public ${2:Type} get${4:FieldName}() {",
+            "        return ${3:fieldName};",
+            "    }",
+            "",
+            "    public void set${4:FieldName}(${2:Type} ${3:fieldName}) {",
+            "        this.${3:fieldName} = ${3:fieldName};",
+            "    }",
+            "}"
+        ],
+        "description": "Encapsulation with private fields and getter/setter methods"
+    },
+    "Java Factory Method": {
+        "prefix": "factoryMethod",
+        "body": [
+            "public class ${1:FactoryClass} {",
+            "    public static ${2:ProductType} createProduct(String type) {",
+            "        switch (type) {",
+            "            case \"${3:Type1}\":",
+            "                return new ${4:ProductType1}();",
+            "            case \"${5:Type2}\":",
+            "                return new ${6:ProductType2}();",
+            "            default:",
+            "                throw new IllegalArgumentException(\"Unknown type: \" + type);",
+            "        }",
+            "    }",
+            "}"
+        ],
+        "description": "Factory method pattern for object creation"
+    },
+    "Java Singleton Pattern": {
+        "prefix": "singleton",
+        "body": [
+            "public class ${1:SingletonClass} {",
+            "    private static ${1:SingletonClass} instance;",
+            "    private ${1:SingletonClass}() {}",
+            "",
+            "    public static ${1:SingletonClass} getInstance() {",
+            "        if (instance == null) {",
+            "            instance = new ${1:SingletonClass}();",
+            "        }",
+            "        return instance;",
+            "    }",
+            "}"
+        ],
+        "description": "Singleton pattern to ensure a class has only one instance"
+    },
+    "Java Strategy Pattern": {
+        "prefix": "strategy",
+        "body": [
+            "public interface ${1:Strategy} {",
+            "    void execute();",
+            "}",
+            "",
+            "public class ${2:ConcreteStrategyA} implements ${1:Strategy} {",
+            "    @Override",
+            "    public void execute() {",
+            "        // Implementation for Strategy A",
+            "    }",
+            "}",
+            "",
+            "public class ${3:ConcreteStrategyB} implements ${1:Strategy} {",
+            "    @Override",
+            "    public void execute() {",
+            "        // Implementation for Strategy B",
+            "    }",
+            "}",
+            "",
+            "public class ${4:Context} {",
+            "    private ${1:Strategy} strategy;",
+            "    public ${4:Context}(${1:Strategy} strategy) {",
+            "        this.strategy = strategy;",
+            "    }",
+            "    public void setStrategy(${1:Strategy} strategy) {",
+            "        this.strategy = strategy;",
+            "    }",
+            "    public void executeStrategy() {",
+            "        strategy.execute();",
+            "    }",
+            "}"
+        ],
+        "description": "Strategy pattern to allow the algorithm's behavior to be selected at runtime"
+    }
+}
