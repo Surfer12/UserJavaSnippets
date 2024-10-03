@@ -1,17 +1,4 @@
 {
-    // Place your snippets for java here. Each snippet is defined under a snippet name and has a prefix, body and 
-    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-    // same ids are connected.
-    // Example:
-    // "Print to console": {
-    // 	"prefix": "log",
-    // 	"body": [
-    // 		"console.log('$1');",
-    // 		"$2"
-    // 	],
-    // 	"description": "Log output to console"
-    // }
     "Basic Java Class": {
         "prefix": "class",
         "body": [
@@ -39,7 +26,7 @@
             "    ${3://constructor body}",
             "}"
         ],
-        "description": "Java Constructor Basic Template",
+        "description": "Java Constructor Basic Template"
     },
     "Basic Java Single Try-Catch Block": {
         "prefix": "singleTryCatch",
@@ -51,7 +38,7 @@
             "    ${3://catch block}",
             "}"
         ],
-        "description": "Single Try-Catch Exception e Template",
+        "description": "Single Try-Catch Exception e Template"
     },
     "Basic Java For Loop": {
         "prefix": "for",
@@ -72,7 +59,7 @@
             "$3:// else block",
             "}"
         ],
-        "description": "If else control flow template",
+        "description": "If else control flow template"
     },
     "Basic Java Getter": {
         "prefix": "getter",
@@ -86,14 +73,14 @@
     "Java List Initializaiton": {
         "prefix": "arrayList",
         "body": [
-            "List<${1:Type}> ${2:listName} = new ArrayList<>();",
+            "List<${1:Type}> ${2:listName} = new ArrayList<>();"
         ],
         "description": "ArrayList Initalization"
     },
     "Java Map Initialization": {
         "prefix": "hashmap",
         "body": [
-            "Map<${1:Key}, ${2:Value}> ${3:mapName} = new HashMap<>();",
+            "Map<${1:Key}, ${2:Value}> ${3:mapName} = new HashMap<>();"
         ],
         "description": "HashMap Initialization"
     },
@@ -1138,5 +1125,323 @@
             "}"
         ],
         "description": "Gets numeric values from the user until a stop word is entered."
+    },
+    "JavaDoc Basic Example": {
+        "prefix": "javadocBasic",
+        "body": [
+            "/**",
+            " * This is a basic Java class with a main method.",
+            " */",
+            "public class ${1:ClassName} {",
+            "    /**",
+            "     * Main method of the class.",
+            "     *",
+            "     * @param args Command line arguments.",
+            "     */",
+            "    public static void main(String[] args) {",
+            "        $0 //main method body",
+            "    }",
+            "}"
+        ],
+        "description": "Basic JavaDoc for a class and its methods."
+    },
+    "Try-With-Resources": {
+        "prefix": "tryWithResources",
+        "body": [
+            "try (${1:ResourceType} ${2:resource} = new ${1:ResourceType}(${3:parameters})) {",
+            "    ${4:// code block}",
+            "} catch (${5:ExceptionType} ${6:e}) {",
+            "    ${7:// exception handling}",
+            "}"
+        ],
+        "description": "Demonstrates the use of try-with-resources for automatic resource management."
+    },
+    "Optional Usage": {
+        "prefix": "optionalUsage",
+        "body": [
+            "Optional<String> optionalString = Optional.ofNullable(${1:value});",
+            "",
+            "if (optionalString.isPresent()) {",
+            "    String value = optionalString.get();",
+            "    // Use the value",
+            "} else {",
+            "    // Handle the case where the value is absent",
+            "}",
+            "",
+            "String defaultValue = optionalString.orElse(${2:default});",
+            "",
+            "String valueIfPresent = optionalString.orElseThrow(${3:exceptionSupplier});"
+        ],
+        "description": "Best practices for using `Optional` to handle null values effectively."
+    },
+    "Override-Equivalent Methods": {
+        "prefix": "overrideEquivalent",
+        "body": [
+            "public class ${1:BaseClass} {",
+            "    public void ${2:baseMethod}() {",
+            "        // Base implementation",
+            "    }",
+            "}",
+            "",
+            "public class ${3:DerivedClass} extends ${1:BaseClass} {",
+            "    @Override",
+            "    public void ${2:baseMethod}() {",
+            "        // Derived implementation",
+            "    }",
+            "}",
+            "",
+            "public class ${4:AnotherDerivedClass} extends ${1:BaseClass} {",
+            "    public void ${2:baseMethod}(${5:Type} ${6:param}) {",
+            "        // Overloaded implementation",
+            "    }",
+            "}"
+        ],
+        "description": "Example of inheritance with override-equivalent methods."
+    },
+    "Enum with Methods": {
+        "prefix": "enumWithMethods",
+        "body": [
+            "public enum ${1:EnumName} {",
+            "    ${2:CONSTANT1},",
+            "    ${3:CONSTANT2},",
+            "    ${4:CONSTANT3};",
+            "",
+            "    public void ${5:methodName}() {",
+            "        // Method implementation",
+            "    }",
+            "",
+            "    public static void main(String[] args) {",
+            "        for (${1:EnumName} value : ${1:EnumName}.values()) {",
+            "            value.${5:methodName}();",
+            "        }",
+            "    }",
+            "}"
+        ],
+        "description": "Enum that includes methods and demonstrates iterating over constants."
+    },
+    "Synchronized Method": {
+        "prefix": "synchronizedMethod",
+        "body": [
+            "public synchronized ${1:void} ${2:methodName}(${3:parameters}) {",
+            "    ${4:// method body}",
+            "}"
+        ],
+        "description": "Use of synchronized keyword to control access to a method."
+    },
+    "Static Block Initialization": {
+        "prefix": "staticBlock",
+        "body": [
+            "public class ${1:ClassName} {",
+            "    static {",
+            "        ${2:// Initialization code}",
+            "    }",
+            "}"
+        ],
+        "description": "Demonstrates the use of static blocks for initializing static variables."
+    },
+    "LinkedHashMap with Access Order": {
+        "prefix": "linkedHashMapAccessOrder",
+        "body": [
+            "Map<${1:KeyType}, ${2:ValueType}> ${3:mapName} = new LinkedHashMap<>();",
+            "${3:mapName}.put(${4:key1}, ${5:value1});",
+            "${3:mapName}.put(${6:key2}, ${7:value2});",
+            "${3:mapName}.put(${8:key3}, ${9:value3});",
+            "System.out.println(${3:mapName}); // Output: {key1=value1, key2=value2, key3=value3}"
+        ],
+        "description": "Demonstrates the creation of a `LinkedHashMap` that maintains access order."
+    },
+    "ArrayList Reversed View": {
+        "prefix": "arrayListReversed",
+        "body": [
+            "List<${1:Type}> ${2:listName} = new ArrayList<>(Arrays.asList(${3:elements}));",
+            "Collections.reverse(${2:listName});",
+            "System.out.println(${2:listName}); // Output: Reversed list"
+        ],
+        "description": "Demonstrates creating a reversed view of an `ArrayList`."
+    },
+    "Unmodifiable Collections": {
+        "prefix": "unmodifiableCollections",
+        "body": [
+            "List<String> originalList = new ArrayList<>(Arrays.asList(\"a\", \"b\", \"c\"));",
+            "List<String> unmodifiableList = Collections.unmodifiableList(originalList);",
+            "",
+            "Set<String> originalSet = new HashSet<>(Arrays.asList(\"x\", \"y\", \"z\"));",
+            "Set<String> unmodifiableSet = Collections.unmodifiableSet(originalSet);",
+            "",
+            "Map<String, Integer> originalMap = new HashMap<>();",
+            "originalMap.put(\"key1\", 1);",
+            "originalMap.put(\"key2\", 2);",
+            "Map<String, Integer> unmodifiableMap = Collections.unmodifiableMap(originalMap);"
+        ],
+        "description": "Creating unmodifiable views of various collections."
+    },
+    "Stream API Enhancements": {
+        "prefix": "streamApiEnhancements",
+        "body": [
+            "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);",
+            "",
+            "// Filtering",
+            "List<Integer> evenNumbers = numbers.stream()",
+            "    .filter(n -> n % 2 == 0)",
+            "    .collect(Collectors.toList());",
+            "",
+            "// Mapping",
+            "List<String> numberStrings = numbers.stream()",
+            "    .map(String::valueOf)",
+            "    .collect(Collectors.toList());",
+            "",
+            "// Reducing",
+            "int sum = numbers.stream()",
+            "    .reduce(0, Integer::sum);"
+        ],
+        "description": "Demonstrates advanced usage of the Stream API for collections."
+    },
+    "JavaDoc Compliance": {
+        "prefix": "javadocCompliance",
+        "body": [
+            "/**",
+            " * This is a basic Java class with a main method.",
+            " */",
+            "public class ${1:ClassName} {",
+            "    /**",
+            "     * Main method of the class.",
+            "     *",
+            "     * @param args Command line arguments.",
+            "     */",
+            "    public static void main(String[] args) {",
+            "        $0 //main method body",
+            "    }",
+            "}"
+        ],
+        "description": "Basic JavaDoc for a class and its methods."
+    },
+    "JavaDoc for Enum": {
+        "prefix": "javadocEnum",
+        "body": [
+            "/**",
+            " * This is an enum type with constants representing different states.",
+            " */",
+            "public enum ${1:EnumName} {",
+            "    /**",
+            "     * Constant representing the first state.",
+            "     */",
+            "    ${2:CONSTANT1},",
+            "    /**",
+            "     * Constant representing the second state.",
+            "     */",
+            "    ${3:CONSTANT2},",
+            "    /**",
+            "     * Constant representing the third state.",
+            "     */",
+            "    ${4:CONSTANT3};",
+            "}"
+        ],
+        "description": "JavaDoc for an enum type with details on each constant."
+    },
+    "Java Language Specification Compliance": {
+        "prefix": "javaLanguageSpecificationCompliance",
+        "body": [
+            "/**",
+            " * This is a basic Java class with a main method.",
+            " */",
+            "public class ${1:ClassName} {",
+            "    /**",
+            "     * Main method of the class.",
+            "     *",
+            "     * @param args Command line arguments.",
+            "     */",
+            "    public static void main(String[] args) {",
+            "        $0 //main method body",
+            "    }",
+            "}"
+        ],
+        "description": "Basic JavaDoc for a class and its methods."
+    },
+    "Java JVM Specification Compliance": {
+        "prefix": "javaJVMSpecificationCompliance",
+        "body": [
+            "/**",
+            " * This is a basic Java class with a main method.",
+            " */",
+            "public class ${1:ClassName} {",
+            "    /**",
+            "     * Main method of the class.",
+            "     *",
+            "     * @param args Command line arguments.",
+            "     */",
+            "    public static void main(String[] args) {",
+            "        $0 //main method body",
+            "    }",
+            "}"
+        ],
+        "description": "Basic JavaDoc for a class and its methods."
+    },
+    "Java Sequenced Collections Usage": {
+        "prefix": "javaSequencedCollectionsUsage",
+        "body": [
+            "/**",
+            " * This is a basic Java class with a main method.",
+            " */",
+            "public class ${1:ClassName} {",
+            "    /**",
+            "     * Main method of the class.",
+            "     *",
+            "     * @param args Command line arguments.",
+            "     */",
+            "    public static void main(String[] args) {",
+            "        $0 //main method body",
+            "    }",
+            "}"
+        ],
+        "description": "Basic JavaDoc for a class and its methods."
+    },
+    "Java Collections Framework Enhancements": {
+        "prefix": "javaCollectionsFrameworkEnhancements",
+        "body": [
+            "/**",
+            " * This is a basic Java class with a main method.",
+            " */",
+            "public class ${1:ClassName} {",
+            "    /**",
+            "     * Main method of the class.",
+            "     *",
+            "     * @param args Command line arguments.",
+            "     */",
+            "    public static void main(String[] args) {",
+            "        $0 //main method body",
+            "    }",
+            "}"
+        ],
+        "description": "Basic JavaDoc for a class and its methods."
+    },
+    "Java Core Libraries Utilization": {
+        "tryWithResources": {
+            "description": "Demonstrates the use of try-with-resources for automatic resource management.",
+            "body": "try (BufferedReader br = new BufferedReader(new FileReader(\"file.txt\"))) {\n    String line;\n    while ((line = br.readLine()) != null) {\n        System.out.println(line);\n    }\n}"
+        },
+        "optionalUsage": {
+            "description": "Best practices for using `Optional` to handle null values effectively.",
+            "body": "Optional<String> optionalName = Optional.ofNullable(getName());\noptionalName.ifPresent(name -> System.out.println(name));"
+        },
+        "JVM Specification Compliance": {
+            "synchronizedMethod": {
+                "description": "Use of synchronized keyword to control access to a method.",
+                "body": "public synchronized void increment() {\n    count++;\n}"
+            },
+            "staticBlock": {
+                "description": "Demonstrates the use of static blocks for initializing static variables.",
+                "body": "class Example {\n    static int value;\n    static {\n        value = 10;\n    }\n}"
+            }
+        },
+        "Sequenced Collections Usage": {
+            "linkedHashMapAccessOrder": {
+                "description": "Demonstrates the creation of a `LinkedHashMap` that maintains access order.",
+                "body": "LinkedHashMap<String, Integer> map = new LinkedHashMap<>(16, 0.75f, true);\nmap.put(\"A\", 1);\nmap.put(\"B\", 2);\nmap.get(\"A\"); // Access A\n// Iterating will show A first due to access order."
+            },
+            "arrayListReversed": {
+                "description": "Demonstrates creating a reversed view of an `ArrayList`.",
+                "body": "ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));\nCollections.reverse(list);\nSystem.out.println(list); // Output: [5, 4, 3, 2, 1]"
+            }
+        }
     }
 }
