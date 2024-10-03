@@ -1,3 +1,4 @@
+```markdown:JavaSnippetPrefixReferenceDocument.md
 ### Java Snippet Prefix Reference Document
 
 This document provides a quick reference for the snippet prefixes used in the Java snippets file. Each prefix is associated with a specific action or template that can be quickly inserted into your Java projects.
@@ -10,6 +11,7 @@ This document provides a quick reference for the snippet prefixes used in the Ja
 - **`for`**: Inserts a basic for loop.
 - **`ifelse`**: Inserts a basic if-else statement.
 - **`getter`**: Inserts a getter method for a class field.
+- **`mainMethod`**: Inserts a main method template.
 
 #### Collection Initializations
 - **`arrayList`**: Inserts an ArrayList initialization.
@@ -33,8 +35,8 @@ This document provides a quick reference for the snippet prefixes used in the Ja
 
 #### Design Patterns and Principles
 - **`factoryMethod`**: Inserts a factory method pattern implementation.
-- **`singleton`**: Inserts a singleton pattern implementation.
-- **`strategy`**: Inserts a strategy pattern implementation.
+- **`singletonPattern`**: Inserts a singleton pattern implementation.
+- **`strategyPattern`**: Inserts a strategy pattern implementation.
 - **`constructorDI`**: Inserts a constructor dependency injection pattern.
 - **`singleResponsibility`**: Demonstrates the single responsibility principle.
 - **`openClosed`**: Demonstrates the open/closed principle.
@@ -46,6 +48,22 @@ This document provides a quick reference for the snippet prefixes used in the Ja
 - **`polymorphism`**: Demonstrates polymorphism through method overriding.
 - **`abstraction`**: Demonstrates abstraction using abstract classes.
 - **`privateFields`**: Demonstrates encapsulation with private fields.
+
+#### Input Validation and Utility Methods
+- **`getInputWithValidation`**: Gets input from the user with validation using a provided validator function.
+- **`validateNumericInputWithinRange`**: Validates if a given input is numeric and within a specified range.
+- **`validateNonEmptyInput`**: Validates if a given input is not empty.
+
+#### Calculation and Result Display
+- **`addValueToTotalAndIncrementCount`**: Adds a value to a running total and increments a count.
+- **`calculateAverage`**: Calculates the average of accumulated values.
+- **`determineGradeFromAverage`**: Determines a letter grade based on a calculated average.
+- **`displayResults`**: Displays results, including name, average, and grade.
+- **`getValuesFromUserUntilStopWord`**: Gets numeric values from the user until a stop word is entered.
+
+#### JavaDoc Examples
+- **`javadocBasic`**: Basic JavaDoc for a class and its methods.
+- **`javadocEnum`**: JavaDoc for an enum type with details on each constant.
 
 This reference document should help you quickly find and use the appropriate snippet for your Java programming needs, enhancing productivity and maintaining consistency across your projects.
 
@@ -66,3 +84,4 @@ In programming editors and IDEs, **code folding** is a feature that allows users
 - **Editing**: When refactoring or reviewing code, it’s useful to be able to hide parts of the code that are not currently relevant, reducing cognitive load and visual clutter.
 
 Most modern IDEs like IntelliJ IDEA, Visual Studio Code, or Eclipse automatically support multiple levels of code folding and allow users to customize which types of code blocks should be foldable.
+```
