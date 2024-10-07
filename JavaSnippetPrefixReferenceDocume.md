@@ -1,4 +1,3 @@
-```markdown:JavaSnippetPrefixReferenceDocument.md
 ### Java Snippet Prefix Reference Document
 
 This document provides a quick reference for the snippet prefixes used in the Java snippets file. Each prefix is associated with a specific action or template that can be quickly inserted into your Java projects.
