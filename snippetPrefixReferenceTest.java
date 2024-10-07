@@ -1,4 +1,9 @@
+import java.util.Stack;
 
 public class snippetPrefixReferenceTest {
-    public class 
+    private int[] nums;
+
+    public snippetPrefixReferenceTest(int[] nums) {
+        this.nums = nums;
+    }
 }
