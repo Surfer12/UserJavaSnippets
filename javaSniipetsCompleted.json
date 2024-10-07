@@ -1443,5 +1443,580 @@
                 "body": "ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));\nCollections.reverse(list);\nSystem.out.println(list); // Output: [5, 4, 3, 2, 1]"
             }
         }
+    },
+    "Java ArrayList Full": {
+        "prefix": "fullArrayList",
+        "body": [
+            "import java.util.ArrayList;",
+            "import java.util.List;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        List<${2:Type}> ${3:listName} = new ArrayList<>();",
+            "        ${3:listName}.add(${4:element}); // Add element",
+            "        ${2:Type} element = ${3:listName}.get(0); // Get element",
+            "        ${3:listName}.set(0, ${4:newElement}); // Set element at index",
+            "        ${3:listName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:listName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:listName}.size(); // Get the size of the list",
+            "        ${3:listName}.clear(); // Clear the list",
+            "    }",
+            "}"
+        ],
+        "description": "Full ArrayList initialization and common methods"
+    },
+    "Java Stack Full": {
+        "prefix": "fullStack",
+        "body": [
+            "import java.util.Stack;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Stack<${2:Type}> ${3:stackName} = new Stack<>();",
+            "        ${3:stackName}.push(${4:element}); // Push element onto the stack",
+            "        ${2:Type} topElement = ${3:stackName}.peek(); // Peek at the top element of the stack",
+            "        ${2:Type} poppedElement = ${3:stackName}.pop(); // Pop element from the stack",
+            "        boolean isEmpty = ${3:stackName}.isEmpty(); // Check if the stack is empty",
+            "        int size = ${3:stackName}.size(); // Get the size of the stack",
+            "        ${3:stackName}.clear(); // Clear the stack",
+            "    }",
+            "}"
+        ],
+        "description": "Full Stack initialization and common methods"
+    },
+    "Java HashSet Full": {
+        "prefix": "fullHashSet",
+        "body": [
+            "import java.util.HashSet;",
+            "import java.util.Set;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Set<${2:Type}> ${3:setName} = new HashSet<>();",
+            "        ${3:setName}.add(${4:element}); // Add element",
+            "        ${3:setName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:setName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:setName}.size(); // Get the size of the set",
+            "        ${3:setName}.clear(); // Clear the set",
+            "    }",
+            "}"
+        ],
+        "description": "Full HashSet initialization and common methods"
+    },
+    "Java HashMap Full": {
+        "prefix": "fullHashMap",
+        "body": [
+            "import java.util.HashMap;",
+            "import java.util.Map;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new HashMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full HashMap initialization and common methods"
+    },
+    "Java LinkedHashMap Full": {
+        "prefix": "fullLinkedHashMap",
+        "body": [
+            "import java.util.LinkedHashMap;",
+            "import java.util.Map;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new LinkedHashMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full LinkedHashMap initialization and common methods"
+    },
+    "Java TreeMap Full": {
+        "prefix": "fullTreeMap",
+        "body": [
+            "import java.util.TreeMap;",
+            "import java.util.Map;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new TreeMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full TreeMap initialization and common methods"
+    },
+    "Java PriorityQueue Full": {
+        "prefix": "fullPriorityQueue",
+        "body": [
+            "import java.util.PriorityQueue;",
+            "import java.util.Queue;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Queue<${2:Type}> ${3:queueName} = new PriorityQueue<>();",
+            "        ${3:queueName}.add(${4:element}); // Add element",
+            "        ${2:Type} headElement = ${3:queueName}.peek(); // Peek at the head element of the queue",
+            "        ${2:Type} removedElement = ${3:queueName}.poll(); // Remove and return the head element",
+            "        boolean isEmpty = ${3:queueName}.isEmpty(); // Check if the queue is empty",
+            "        int size = ${3:queueName}.size(); // Get the size of the queue",
+            "        ${3:queueName}.clear(); // Clear the queue",
+            "    }",
+            "}"
+        ],
+        "description": "Full PriorityQueue initialization and common methods"
+    },
+    "Java Deque Full": {
+        "prefix": "fullDeque",
+        "body": [
+            "import java.util.Deque;",
+            "import java.util.LinkedList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Deque<${2:Type}> ${3:dequeName} = new LinkedList<>();",
+            "        ${3:dequeName}.addFirst(${4:element}); // Add element to the front",
+            "        ${3:dequeName}.addLast(${4:element}); // Add element to the end",
+            "        ${2:Type} firstElement = ${3:dequeName}.getFirst(); // Get the first element",
+            "        ${2:Type} lastElement = ${3:dequeName}.getLast(); // Get the last element",
+            "        ${2:Type} removedFirst = ${3:dequeName}.removeFirst(); // Remove and return the first element",
+            "        ${2:Type} removedLast = ${3:dequeName}.removeLast(); // Remove and return the last element",
+            "        boolean isEmpty = ${3:dequeName}.isEmpty(); // Check if the deque is empty",
+            "        int size = ${3:dequeName}.size(); // Get the size of the deque",
+            "        ${3:dequeName}.clear(); // Clear the deque",
+            "    }",
+            "}"
+        ],
+        "description": "Full Deque initialization and common methods"
+    },
+    "Java ArrayDeque Full": {
+        "prefix": "fullArrayDeque",
+        "body": [
+            "import java.util.ArrayDeque;",
+            "import java.util.Deque;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Deque<${2:Type}> ${3:dequeName} = new ArrayDeque<>();",
+            "        ${3:dequeName}.addFirst(${4:element}); // Add element to the front",
+            "        ${3:dequeName}.addLast(${4:element}); // Add element to the end",
+            "        ${2:Type} firstElement = ${3:dequeName}.getFirst(); // Get the first element",
+            "        ${2:Type} lastElement = ${3:dequeName}.getLast(); // Get the last element",
+            "        ${2:Type} removedFirst = ${3:dequeName}.removeFirst(); // Remove and return the first element",
+            "        ${2:Type} removedLast = ${3:dequeName}.removeLast(); // Remove and return the last element",
+            "        boolean isEmpty = ${3:dequeName}.isEmpty(); // Check if the deque is empty",
+            "        int size = ${3:dequeName}.size(); // Get the size of the deque",
+            "        ${3:dequeName}.clear(); // Clear the deque",
+            "    }",
+            "}"
+        ],
+        "description": "Full ArrayDeque initialization and common methods"
+    },
+    "Java LinkedList Full": {
+        "prefix": "fullLinkedList",
+        "body": [
+            "import java.util.LinkedList;",
+            "import java.util.List;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        List<${2:Type}> ${3:listName} = new LinkedList<>();",
+            "        ${3:listName}.add(${4:element}); // Add element",
+            "        ${2:Type} element = ${3:listName}.get(0); // Get element",
+            "        ${3:listName}.set(0, ${4:newElement}); // Set element at index",
+            "        ${3:listName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:listName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:listName}.size(); // Get the size of the list",
+            "        ${3:listName}.clear(); // Clear the list",
+            "    }",
+            "}"
+        ],
+        "description": "Full LinkedList initialization and common methods"
+    },
+    "Java Vector Full": {
+        "prefix": "fullVector",
+        "body": [
+            "import java.util.Vector;",
+            "import java.util.List;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        List<${2:Type}> ${3:listName} = new Vector<>();",
+            "        ${3:listName}.add(${4:element}); // Add element",
+            "        ${2:Type} element = ${3:listName}.get(0); // Get element",
+            "        ${3:listName}.set(0, ${4:newElement}); // Set element at index",
+            "        ${3:listName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:listName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:listName}.size(); // Get the size of the list",
+            "        ${3:listName}.clear(); // Clear the list",
+            "    }",
+            "}"
+        ],
+        "description": "Full Vector initialization and common methods"
+    },
+    "Java Queue Full": {
+        "prefix": "fullQueue",
+        "body": [
+            "import java.util.Queue;",
+            "import java.util.LinkedList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Queue<${2:Type}> ${3:queueName} = new LinkedList<>();",
+            "        ${3:queueName}.add(${4:element}); // Add element",
+            "        ${2:Type} headElement = ${3:queueName}.peek(); // Peek at the head element of the queue",
+            "        ${2:Type} removedElement = ${3:queueName}.poll(); // Remove and return the head element",
+            "        boolean isEmpty = ${3:queueName}.isEmpty(); // Check if the queue is empty",
+            "        int size = ${3:queueName}.size(); // Get the size of the queue",
+            "        ${3:queueName}.clear(); // Clear the queue",
+            "    }",
+            "}"
+        ],
+        "description": "Full Queue initialization and common methods"
+    },
+    "Java LinkedListStack Full": {
+        "prefix": "fullLinkedListStack",
+        "body": [
+            "import java.util.LinkedList;",
+            "import java.util.Stack;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Stack<${2:Type}> ${3:stackName} = new Stack<>();",
+            "        ${3:stackName}.push(${4:element}); // Push element onto the stack",
+            "        ${2:Type} topElement = ${3:stackName}.peek(); // Peek at the top element of the stack",
+            "        ${2:Type} poppedElement = ${3:stackName}.pop(); // Pop element from the stack",
+            "        boolean isEmpty = ${3:stackName}.isEmpty(); // Check if the stack is empty",
+            "        int size = ${3:stackName}.size(); // Get the size of the stack",
+            "        ${3:stackName}.clear(); // Clear the stack",
+            "    }",
+            "}"
+        ],
+        "description": "Full LinkedListStack initialization and common methods"
+    },
+    "Java LinkedListQueue Full": {
+        "prefix": "fullLinkedListQueue",
+        "body": [
+            "import java.util.LinkedList;",
+            "import java.util.Queue;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Queue<${2:Type}> ${3:queueName} = new LinkedList<>();",
+            "        ${3:queueName}.add(${4:element}); // Add element",
+            "        ${2:Type} headElement = ${3:queueName}.peek(); // Peek at the head element of the queue",
+            "        ${2:Type} removedElement = ${3:queueName}.poll(); // Remove and return the head element",
+            "        boolean isEmpty = ${3:queueName}.isEmpty(); // Check if the queue is empty",
+            "        int size = ${3:queueName}.size(); // Get the size of the queue",
+            "        ${3:queueName}.clear(); // Clear the queue",
+            "    }",
+            "}"
+        ],
+        "description": "Full LinkedListQueue initialization and common methods"
+    },
+    "Java LinkedListDeque Full": {
+        "prefix": "fullLinkedListDeque",
+        "body": [
+            "import java.util.LinkedList;",
+            "import java.util.Deque;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Deque<${2:Type}> ${3:dequeName} = new LinkedList<>();",
+            "        ${3:dequeName}.addFirst(${4:element}); // Add element to the front",
+            "        ${3:dequeName}.addLast(${4:element}); // Add element to the end",
+            "        ${2:Type} firstElement = ${3:dequeName}.getFirst(); // Get the first element",
+            "        ${2:Type} lastElement = ${3:dequeName}.getLast(); // Get the last element",
+            "        ${2:Type} removedFirst = ${3:dequeName}.removeFirst(); // Remove and return the first element",
+            "        ${2:Type} removedLast = ${3:dequeName}.removeLast(); // Remove and return the last element",
+            "        boolean isEmpty = ${3:dequeName}.isEmpty(); // Check if the deque is empty",
+            "        int size = ${3:dequeName}.size(); // Get the size of the deque",
+            "        ${3:dequeName}.clear(); // Clear the deque",
+            "    }",
+            "}"
+        ],
+        "description": "Full LinkedListDeque initialization and common methods"
+    },
+    "Java LinkedListArrayListFull": {
+        "prefix": "fullLinkedListArrayList",
+        "body": [
+            "import java.util.LinkedList;",
+            "import java.util.ArrayList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        List<${2:Type}> ${3:listName} = new LinkedList<>();",
+            "        ${3:listName}.add(${4:element}); // Add element",
+            "        ${2:Type} element = ${3:listName}.get(0); // Get element",
+            "        ${3:listName}.set(0, ${4:newElement}); // Set element at index",
+            "        ${3:listName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:listName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:listName}.size(); // Get the size of the list",
+            "        ${3:listName}.clear(); // Clear the list",
+            "    }",
+            "}"
+        ],
+        "description": "Full LinkedListArrayList initialization and common methods"
+    },
+    "Java ArrayListLinkedListFull": {
+        "prefix": "fullArrayListLinkedList",
+        "body": [
+            "import java.util.ArrayList;",
+            "import java.util.LinkedList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        List<${2:Type}> ${3:listName} = new ArrayList<>();",
+            "        ${3:listName}.add(${4:element}); // Add element",
+            "        ${2:Type} element = ${3:listName}.get(0); // Get element",
+            "        ${3:listName}.set(0, ${4:newElement}); // Set element at index",
+            "        ${3:listName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:listName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:listName}.size(); // Get the size of the list",
+            "        ${3:listName}.clear(); // Clear the list",
+            "    }",
+            "}"
+        ],
+        "description": "Full ArrayListLinkedList initialization and common methods"
+    },
+    "Java LinkedListHashSetFull": {
+        "prefix": "fullLinkedListHashSet",
+        "body": [
+            "import java.util.LinkedList;",
+            "import java.util.HashSet;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Set<${2:Type}> ${3:setName} = new HashSet<>();",
+            "        ${3:setName}.add(${4:element}); // Add element",
+            "        ${3:setName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:setName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:setName}.size(); // Get the size of the set",
+            "        ${3:setName}.clear(); // Clear the set",
+            "    }",
+            "}"
+        ],
+        "description": "Full LinkedListHashSet initialization and common methods"
+    },
+    "Java HashSetLinkedListFull": {
+        "prefix": "fullHashSetLinkedList",
+        "body": [
+            "import java.util.HashSet;",
+            "import java.util.LinkedList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Set<${2:Type}> ${3:setName} = new HashSet<>();",
+            "        ${3:setName}.add(${4:element}); // Add element",
+            "        ${3:setName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:setName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:setName}.size(); // Get the size of the set",
+            "        ${3:setName}.clear(); // Clear the set",
+            "    }",
+            "}"
+        ],
+        "description": "Full HashSetLinkedList initialization and common methods"
+    },
+    "Java HashSetArrayListFull": {
+        "prefix": "fullHashSetArrayList",
+        "body": [
+            "import java.util.HashSet;",
+            "import java.util.ArrayList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Set<${2:Type}> ${3:setName} = new HashSet<>();",
+            "        ${3:setName}.add(${4:element}); // Add element",
+            "        ${3:setName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:setName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:setName}.size(); // Get the size of the set",
+            "        ${3:setName}.clear(); // Clear the set",
+            "    }",
+            "}"
+        ],
+        "description": "Full HashSetArrayList initialization and common methods"
+    },
+    "Java ArrayListHashSetFull": {
+        "prefix": "fullArrayListHashSet",
+        "body": [
+            "import java.util.ArrayList;",
+            "import java.util.HashSet;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Set<${2:Type}> ${3:setName} = new HashSet<>();",
+            "        ${3:setName}.add(${4:element}); // Add element",
+            "        ${3:setName}.remove(${4:element}); // Remove element",
+            "        boolean contains = ${3:setName}.contains(${4:element}); // Check if contains element",
+            "        int size = ${3:setName}.size(); // Get the size of the set",
+            "        ${3:setName}.clear(); // Clear the set",
+            "    }",
+            "}"
+        ],
+        "description": "Full ArrayListHashSet initialization and common methods"
+    },
+    "Java LinkedListHashMapFull": {
+        "prefix": "fullLinkedListHashMap",
+        "body": [
+            "import java.util.LinkedList;",
+            "import java.util.HashMap;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new HashMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        boolean containsValue = ${4:mapName}.containsValue(${6:value}); // Check if contains value",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full LinkedListHashMap initialization and common methods"
+    },
+    "Java HashMapLinkedListFull": {
+        "prefix": "fullHashMapLinkedList",
+        "body": [
+            "import java.util.HashMap;",
+            "import java.util.LinkedList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new HashMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        boolean containsValue = ${4:mapName}.containsValue(${6:value}); // Check if contains value",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full HashMapLinkedList initialization and common methods"
+    },
+    "Java HashMapArrayListFull": {
+        "prefix": "fullHashMapArrayList",
+        "body": [
+            "import java.util.HashMap;",
+            "import java.util.ArrayList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new HashMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        boolean containsValue = ${4:mapName}.containsValue(${6:value}); // Check if contains value",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full HashMapArrayList initialization and common methods"
+    },
+    "Java ArrayListHashMapFull": {
+        "prefix": "fullArrayListHashMap",
+        "body": [
+            "import java.util.ArrayList;",
+            "import java.util.HashMap;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new HashMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        boolean containsValue = ${4:mapName}.containsValue(${6:value}); // Check if contains value",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full ArrayListHashMap initialization and common methods"
+    },
+    "Java LinkedListTreeMapFull": {
+        "prefix": "fullLinkedListTreeMap",
+        "body": [
+            "import java.util.LinkedList;",
+            "import java.util.TreeMap;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new TreeMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        boolean containsValue = ${4:mapName}.containsValue(${6:value}); // Check if contains value",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full LinkedListTreeMap initialization and common methods"
+    },
+    "Java TreeMapLinkedListFull": {
+        "prefix": "fullTreeMapLinkedList",
+        "body": [
+            "import java.util.TreeMap;",
+            "import java.util.LinkedList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new TreeMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        boolean containsValue = ${4:mapName}.containsValue(${6:value}); // Check if contains value",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full TreeMapLinkedList initialization and common methods"
+    },
+    "Java TreeMapArrayListFull": {
+        "prefix": "fullTreeMapArrayList",
+        "body": [
+            "import java.util.TreeMap;",
+            "import java.util.ArrayList;",
+            "",
+            "public class ${1:ExampleClass} {",
+            "    public static void main(String[] args) {",
+            "        Map<${2:KeyType}, ${3:ValueType}> ${4:mapName} = new TreeMap<>();",
+            "        ${4:mapName}.put(${5:key}, ${6:value}); // Add key-value pair",
+            "        ${3:ValueType} value = ${4:mapName}.get(${5:key}); // Get value by key",
+            "        ${4:mapName}.remove(${5:key}); // Remove key-value pair",
+            "        boolean containsKey = ${4:mapName}.containsKey(${5:key}); // Check if contains key",
+            "        boolean containsValue = ${4:mapName}.containsValue(${6:value}); // Check if contains value",
+            "        int size = ${4:mapName}.size(); // Get the size of the map",
+            "        ${4:mapName}.clear(); // Clear the map",
+            "    }",
+            "}"
+        ],
+        "description": "Full TreeMapArrayList initialization and common methods"
     }
 }
