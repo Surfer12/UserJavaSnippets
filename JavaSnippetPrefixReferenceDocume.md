@@ -12,6 +12,35 @@ This document provides a quick reference for the snippet prefixes used in the Ja
 - **`getter`**: Inserts a getter method for a class field.
 - **`mainMethod`**: Inserts a main method template.
 
+#### Collections Templates
+- **`fullArrayList`**: Inserts a full ArrayList initialization.
+- **`fullHashMap`**: Inserts a full HashMap initialization.
+- **`fullLinkedList`**: Inserts a full LinkedList initialization.
+- **`fullLinkedHashMap`**: Inserts a full LinkedHashMap initialization.
+- **`fullTreeMap`**: Inserts a full TreeMap initialization.
+- **`fullTreeSet`**: Inserts a full TreeSet initialization. 
+- **`fullHashSet`**: Inserts a full HashSet initialization.
+- **`fullStack`**: Inserts a full Stack initialization.
+- **`fullQueue`**: Inserts a full Queue initialization.
+- **`fullPriorityQueue`**: Inserts a full PriorityQueue initialization.
+- **`fullArrayDeque`**: Inserts a full ArrayDeque initialization.
+- **`fullDeque`**: Inserts a full Deque initialization.
+- **`fullLinkedListDeque`**: Inserts a full LinkedListDeque initialization and common methods.
+- **`fullLinkedListArrayList`**: Inserts a full LinkedListArrayList initialization and common methods.
+- **`fullArrayListLinkedList`**: Inserts a full ArrayListLinkedList initialization and common methods.
+- **`fullLinkedListHashSet`**: Inserts a full LinkedListHashSet initialization and common methods.
+- **`fullHashSetLinkedList`**: Inserts a full HashSetLinkedList initialization and common methods.
+- **`fullHashSetArrayList`**: Inserts a full HashSetArrayList initialization and common methods.
+- **`fullArrayListHashSet`**: Inserts a full ArrayListHashSet initialization and common methods.
+- **`fullLinkedListHashMap`**: Inserts a full LinkedListHashMap initialization and common methods.
+- **`fullHashMapLinkedList`**: Inserts a full HashMapLinkedList initialization and common methods.
+- **`fullHashMapArrayList`**: Inserts a full HashMapArrayList initialization and common methods.
+- **`fullArrayListHashMap`**: Inserts a full ArrayListHashMap initialization and common methods.
+- **`fullLinkedListTreeMap`**: Inserts a full LinkedListTreeMap initialization and common methods.
+- **`fullTreeMapLinkedList`**: Inserts a full TreeMapLinkedList initialization and common methods.
+- **`fullTreeMapArrayList`**: Inserts a full TreeMapArrayList initialization and common methods.
+
+
 #### Collection Initializations
 - **`arrayList`**: Inserts an ArrayList initialization.
 - **`hashMap`**: Inserts a HashMap initialization.
@@ -63,6 +92,16 @@ This document provides a quick reference for the snippet prefixes used in the Ja
 #### JavaDoc Examples
 - **`javadocBasic`**: Basic JavaDoc for a class and its methods.
 - **`javadocEnum`**: JavaDoc for an enum type with details on each constant.
+
+#### Additional Prefixes
+
+- **`javaLanguageSpecificationCompliance`**: Basic JavaDoc for a class and its methods focusing on Java Language Specification compliance.
+- **`javaJVMSpecificationCompliance`**: Basic JavaDoc for a class and its methods focusing on JVM Specification compliance.
+- **`javaSequencedCollectionsUsage`**: Basic JavaDoc for a class and its methods focusing on sequenced collections usage.
+- **`javaCollectionsFrameworkEnhancements`**: Basic JavaDoc for a class and its methods focusing on Java Collections Framework enhancements.
+- **`javaCoreLibrariesUtilization`**: Demonstrates the use of core Java libraries like `try-with-resources` and `Optional`.
+- **`JVM Specification Compliance`**: Use of synchronized keyword and static blocks for JVM specification compliance.
+- **`Sequenced Collections Usage`**: Demonstrates the use of sequenced collections in Java.
 
 This reference document should help you quickly find and use the appropriate snippet for your Java programming needs, enhancing productivity and maintaining consistency across your projects.
 
